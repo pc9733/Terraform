@@ -57,7 +57,7 @@ resource "aws_instance" "Docker_instance" {
 }
 
 resource "aws_instance" "Ansible_master_instance" {
-  ami           = "ami-0398dd8383f51531d"
+  ami           = "ami-009b638632aa570e7"
   instance_type = "t2.micro"
   key_name      = "Affirmation"
   root_block_device {
