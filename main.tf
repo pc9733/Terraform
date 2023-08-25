@@ -69,3 +69,17 @@ resource "aws_instance" "Ansible_master_instance" {
     Name = "Ansible_master"
   }
 }
+
+resource "aws_instance" "Jenkins"" {
+  ami           = "ami-08a52ddb321b32a8c"
+  instance_type = "t2.micro"
+  key_name      = "Affirmation"
+  root_block_device {
+    volume_size = 10
+  }
+  security_groups = [aws_security_group.example_security_group.name]
+
+  tags = {
+    Name = "Jenkins"
+  }
+}
