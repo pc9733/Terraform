@@ -32,6 +32,13 @@ resource "aws_security_group" "example_security_group" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+    ingress {
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
   egress {
     from_port   = 0
     to_port     = 0
@@ -70,7 +77,7 @@ resource "aws_instance" "Ansible_master_instance" {
   }
 }
 
-resource "aws_instance" "Jenkins"" {
+resource "aws_instance" "Jenkins" {
   ami           = "ami-08a52ddb321b32a8c"
   instance_type = "t2.micro"
   key_name      = "Affirmation"
