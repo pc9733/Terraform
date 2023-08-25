@@ -70,7 +70,7 @@ resource "aws_instance" "Ansible_master_instance" {
   }
 }
 
-resource "aws_instance" "Jenkins"" {
+resource "aws_instance" "Jenkins" {
   ami           = "ami-08a52ddb321b32a8c"
   instance_type = "t2.micro"
   key_name      = "Affirmation"
