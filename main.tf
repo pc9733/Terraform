@@ -78,7 +78,7 @@ resource "aws_instance" "Ansible_master_instance" {
 }
 
 resource "aws_instance" "Jenkins" {
-  ami           = "ami-04c2c04d335ea1bef"
+  ami           = "ami-0bef84e042f507413"
   instance_type = "t2.micro"
   key_name      = "Affirmation"
   root_block_device {
