@@ -51,7 +51,7 @@ resource "aws_security_group" "example_security_group" {
 
 resource "aws_instance" "Docker_instance" {
   ami           = "ami-0d47196b4a8868027"
-  instance_type = "t2.micro"
+  type          =  "${var.instance_type}"
   key_name      = "Affirmation"
   root_block_device {
     volume_size = 10
@@ -65,7 +65,7 @@ resource "aws_instance" "Docker_instance" {
 
 resource "aws_instance" "Ansible_master_instance" {
   ami           = "ami-009b638632aa570e7"
-  instance_type = "t2.micro"
+  type          =  "${var.instance_type}"
   key_name      = "Affirmation"
   root_block_device {
     volume_size = 10
@@ -79,7 +79,7 @@ resource "aws_instance" "Ansible_master_instance" {
 
 resource "aws_instance" "Jenkins" {
   ami           = "ami-0bef84e042f507413"
-  instance_type = "t2.micro"
+  type          =  "${var.instance_type}"
   key_name      = "Affirmation"
   root_block_device {
     volume_size = 10
